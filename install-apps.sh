@@ -1,22 +1,22 @@
 #!/bin/sh
 
 CURRENT_DIR="$(pwd)"
+FORCE_INSTALL="sudo apt-get --assume-yes --force-yes install"
 
 install_apps() {
   sudo apt-get update;
-  force_install="sudo apt-get --assume-yes --force-yes install"
   
   # General Utilities
-  `echo $force_install` build-essential;
-  `echo $force_install` curl;
-  `echo $force_install` wget;
+  `echo $FORCE_INSTALL` build-essential;
+  `echo $FORCE_INSTALL` curl;
+  `echo $FORCE_INSTALL` wget;
   
   # Preferred Utilities
   
   # Development
   
   ## Editors
-  sudo apt-get install emacs;
+  `echo $FORCE_INSTALL` emacs;
   install_vim;
   
   ## Tools
@@ -35,12 +35,12 @@ install_apps() {
 }
 
 install_vim() {
-  sudo apt-get install vim;
+  `echo $FORCE_INSTALL` vim;
   # todo: install my .vimrc here (maybe separate repo)
 }
 
 install_zsh() {
-  sudo apt-get install zsh;
+  `echo $FORCE_INSTALL` zsh;
   # sudo apt-get install zsh-completions;
 
   # Install oh-my-zsh
@@ -51,7 +51,7 @@ install_zsh() {
 }
 
 install_tmux() {
-  sudo apt-get install tmux;
+  `echo $FORCE_INSTALL` tmux;
   # todo: install my tmux config here (maybe separate repo)
 }
 
