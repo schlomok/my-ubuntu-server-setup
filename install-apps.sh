@@ -67,6 +67,7 @@ install_java() {
 
 install_rvm() {
   echo "Installing RVM (along with latest ruby and rails)"
+  command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
   curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
 }
 
