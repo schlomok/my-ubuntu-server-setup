@@ -37,11 +37,13 @@ install_apps() {
 }
 
 install_vim() {
+  echo "Installing vim"
   `echo $FORCE_INSTALL` vim;
   # todo: install my .vimrc here (maybe separate repo)
 }
 
 install_zsh() {
+  echo "Installing zsh"
   `echo $FORCE_INSTALL` zsh;
   # sudo apt-get install zsh-completions;
 
@@ -53,12 +55,14 @@ install_zsh() {
 }
 
 install_tmux() {
+  echo "Installing tmux"
   `echo $FORCE_INSTALL` tmux;
   # todo: install my tmux config here (maybe separate repo)
 }
 
 install_java() {
   # Install java
+  echo "Installing Java"
 }
 
 install_rvm() {
