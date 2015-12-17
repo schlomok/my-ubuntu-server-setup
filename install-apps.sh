@@ -9,6 +9,8 @@ install_apps() {
   # General Utilities
   `echo $FORCE_INSTALL` build-essential;
   `echo $FORCE_INSTALL` curl;
+  `echo $FORCE_INSTALL` openssh-server;
+  `echo $FORCE_INSTALL` openssh-client;
   `echo $FORCE_INSTALL` wget;
   
   # Preferred Utilities
