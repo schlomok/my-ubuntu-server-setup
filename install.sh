@@ -8,6 +8,10 @@ install() {
   echo "Installing [$PROJECT_NAME] by $PROJECT_AUTHOR..."
   echo "Directory: $CURRENT_DIR" 
   ./install-apps.sh 
+  
+  echo "Installing dotfiles"
+  sh -c "$(curl https://raw.githubusercontent.com/schlomok/dotfiles/master/install.sh)"
+  
   exit 0
 }
 
